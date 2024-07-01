@@ -22,6 +22,7 @@ private readonly ILogger _logger;
             _logger = logger;
             _tokenGenerator = tokenGenerator;
         }
+        [Route("signup")]
         public async Task<IActionResult> SignUp([FromBody] User user)
         {
             if (ModelState.IsValid)
